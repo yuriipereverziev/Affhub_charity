@@ -175,31 +175,23 @@ br {
 }
 
 .btn {
+  font-family: "Acworth", sans-serif;
+  font-weight: bold;
+  display: block;
   position: relative;
-  max-width: 280px;
+  max-width: 296px;
   width: 100%;
   font-size: 18px;
   font-weight: bold;
-  background: $purple;
+  background: $blue;
   color: white;
   cursor: pointer;
-  text-align: left;
-  padding: 15px 60px 15px 10px;
+  padding: 15px 15px 15px 10px;
   border: 2px solid black;
-  box-shadow: 0 8px 0 0 rgba(233, 223, 255, 1);
+  box-shadow: 4px 5px 0 0 #ffe600;
   margin: 0 auto;
-
-  &::before {
-    position: absolute;
-    content: "";
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 11px;
-    background: url("../img/arrow-white.svg");
-    background-size: 100%;
-  }
+  text-transform: uppercase;
+  text-align: center;
 
   &:active {
     color: black;
@@ -212,9 +204,9 @@ br {
     }
   }
 
-  @include rm(640) {
-    margin: 0;
-  }
+  //@include rm(640) {
+  //  margin: 0;
+  //}
 
   @include rm(1024) {
     &:hover {
@@ -294,4 +286,9 @@ box-shadow: 8px -8px 0 0 #ffddf4}
 
 .circle-shadow-purple {
   box-shadow: 8px -8px 0 0 #decffe;
+}
+
+
+.color-red {
+  color: red;
 }

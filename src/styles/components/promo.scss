@@ -3,6 +3,39 @@
   padding-bottom: 30px;
 }
 
+.promo .container {
+  @include rm(640) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include rm(768){
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.promo_right {
+  @include rm(640) {
+    max-width: 296px;
+    width: 100%;
+  }
+  @include rm(768){
+    max-width: 210px;
+  }
+}
+
+.promo_left {
+  @include rm(640) {
+    max-width: 296px;
+    width: 100%;
+  }
+
+  @include rm(768){
+    max-width: 420px;
+    margin-right: 60px;
+  }
+}
+
 .promo__logo {
   width: 100%;
   max-width: 135px;
@@ -13,7 +46,7 @@
   }
 
   @include rm(768) {
-    max-width: 190px;
+    max-width: 205px;
   }
 
   @include rm(1024) {
@@ -38,6 +71,14 @@
 
   @include rm(480) {
     max-width: 100%;
+    font-size: 40px;
+  }
+  @include rm(640) {
+    font-size: 35px;
+  }
+
+  @include rm(768) {
+    font-size: 50px;
   }
 
   @include rm(1024) {
@@ -50,35 +91,12 @@
   }
 }
 
-.promo__title-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @include rm(480) {
-    flex-direction: row;
-  }
-
-  @include rm(1220) {
-    line-height: 1;
-  }
-}
-
 .promo__title-first {
   padding-left: 1px;
   padding-right: 1px;
   background: linear-gradient(270deg, #FFE600 0%, rgba(255, 230, 0, 0) 100%);
   margin-bottom: 5px;
 }
-
-//  @include rm(1220){
-//    font-size: 96px;
-//    line-height: 1; //desk
-//    padding-left: 15px; //desk
-//    padding-right: 15px; //desk
-//    padding-bottom: 10px; //desk
-//  }
-//}
 
 .promo__title-second {
   background: linear-gradient(90deg, #10E6D9 0%, rgba(16, 230, 217, 0) 100%);
@@ -92,22 +110,6 @@
   padding-right: 1px;
   background: linear-gradient(270deg, #FF57C6 0%, rgba(255, 87, 198, 0) 100%);
 }
-//  //font-family: "Montserrat", Helvetica, sans-serif;
-//  //font-style: italic;
-//
-//  @include rm(1220){
-//    padding: 7px;
-//    padding-left: 10px;
-//    padding-right: 25px;
-//  }
-//}
-
-//.promo__subtitle-second {
-//  @include rm(1220) {
-//    padding: 7px;
-//    padding-right: 15px;
-//  }
-//}
 
 .promo__title-last {
   align-self: flex-end;
@@ -129,6 +131,11 @@
   line-height: 30px;
   margin-bottom: 20px;
 
+  @include rm(768){
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
   @include rm(1220) {
     margin-bottom: 0;
     position: absolute;
@@ -145,14 +152,25 @@
   align-items: center;
   background: #ffe600;
   padding: 10px 19px;
+
+  max-width: 296px;
+  width: 100%;
+  margin: 0 auto;
   margin-bottom: 20px;
+
+  @include rm(768){
+    margin-bottom: 30px;
+  }
 }
 
 .promo__calendar-img {
   width: 40px;
   height: 40px;
-  background: red;
   margin-right: 45px;
+
+  @include rm(768){
+    margin-right: 15px;
+  }
 }
 
 .promo__calendar-text {
@@ -160,6 +178,10 @@
   line-height: 50px;
   font-weight: 500;
   margin-right: 15px;
+
+  @include rm(768){
+    margin-right: 8px;
+  }
 }
 
 .promo_calendar-info {
@@ -172,8 +194,10 @@
   line-height: 24px;
 
   @include rm(640) {
-    margin-bottom: 0;
-    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  @include rm(769) {
+    margin-bottom: 30px;
   }
 
   @include rm(1024) {
@@ -189,27 +213,13 @@
   }
 }
 
-.promo__wrapper {
-  @include rm(640) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  @include rm(1024) {
-    justify-content: space-between;
-  }
-
-  @include rm(1220) {
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 0; //desk
-  }
-}
 
 .promo__btn {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+
+  @include rm(768) {
+    margin-top: 50px;
+  }
 
   @include rm(1024) {
     order: 1;
@@ -220,35 +230,23 @@
   }
 }
 
-.promo__entry {
-  margin-bottom: 20px;
-  font-style: italic;
 
-  @include rm(640) {
-    margin-bottom: 0;
-  }
+.promo__footnote {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
 
-  @include rm(1024) {
-    order: 2;
-  }
-
-  @include rm(1220) {
-    line-height: 1.7; //desk
+.promo-btn__mob {
+  @include rm(768){
+    display: none;
   }
 }
 
 
-.timer-wrapper {
-  order: 2;
-
-  @include rm(768) {
-    order: 0;
-  }
-}
-
-.promo-title__wrapper {
-  @include rm(1220) {
-    position: relative;
-    margin-bottom: 65px;
+.promo-btn__desk {
+  display: none;
+  @include rm(768){
+    display: block;
   }
 }

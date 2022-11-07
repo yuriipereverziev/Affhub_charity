@@ -9,7 +9,7 @@ const Timer = (function () {
     timerMeetup: function () {
       function timer() {
         const today = new Date();
-        const countDownDate = new Date(2022, 10, 4, 17, 0);
+        const countDownDate = new Date(2022, 11, 16, 17, 0);
         const distance = countDownDate - today;
 
         let days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -37,15 +37,17 @@ const Timer = (function () {
         Timer.timeToHtml(minutesTo, minutes);
         Timer.timeToHtml(secondsTo, seconds);
 
+        console.log(days)
+
       }
       setInterval(timer, 1000);
-
     },
 
     timeToHtml: function (container, time) {
       for (let i = 0; i < container.length; i++) {
         const element = container[i];
         element.innerHTML = time;
+        // console.log(time)
       }
     },
     init: function () {

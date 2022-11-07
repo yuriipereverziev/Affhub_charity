@@ -1,6 +1,12 @@
 .timer {
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
+
+  @include rm(640) {
+    margin-bottom: 20px;
+  }
 }
 
 .timer-wrapper {
@@ -48,21 +54,31 @@
 }
 
 .timer__block {
+  position: relative;
+
   &:not(:last-of-type) {
-    margin-right: 10px;
+    margin-right: 15px;
   }
 }
 
 .timer .timer__el {
   display: flex;
-  width: 34px;
-  height: 42px;
-  font-size: 18px;
-  align-items: center;
+
+  padding: 5px;
+  width: 61px;
+  height: 56px;
+  background: black;
+  font-size: 28px;
+  line-height: 35px;
+  align-items: flex-start;
   justify-content: center;
   font-weight: 700;
   border: 1px solid black;
-  background: white;
+  color: white;
+
+  @include rm(768){
+    width: 42px;
+  }
 }
 
 .timer .timer__el:not(:last-of-type) {
@@ -70,10 +86,20 @@
 }
 
 .timer__text {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 12px;
   font-weight: 500;
   font-style: italic;
   display: block;
   margin-top: 2px;
+  color: white;
+
+
+  @include rm(768){
+    font-size: 9px;
+  }
 
 }
