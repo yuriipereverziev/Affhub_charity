@@ -94,6 +94,10 @@
 .planing__item-img {
   height: 67px;
   margin: 0 auto;
+
+  @include rm(1024){
+    height: 82px;
+  }
 }
 
 
