@@ -2,7 +2,7 @@ body {
   position: relative;
   font-family: $main-font;
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.67;
   overflow-x: hidden;
 
   @include rm(1024){
@@ -53,7 +53,7 @@ button {
     width: 1024px;
   }
 
-  @include rm(1220) {
+  @include rm(1300) {
     padding-left: 10px;
     padding-right: 10px;
     width: 1220px;
@@ -62,30 +62,32 @@ button {
 
 .title {
   font-family: "Acworth", sans-serif;
-  font-size: 25px;
-  color: rgb(32, 32, 32);
+  font-size: 24px;
+  color: #000000;
   font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 25px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  word-wrap: break-word;
 
-  @include rm(480) {
+  //@include rm(480) {
+  //  font-size: 30px;
+  //}
+  //
+  //@include rm(640) {
+  //  font-size: 34px;
+  //}
+  //
+  //@include rm(768) {
+  //  font-size: 38px;
+  //}
+
+  //@include rm(1024) {
+  //  font-size: 40px;
+  //}
+
+  @include rm(1300) {
     font-size: 30px;
-  }
-
-  @include rm(640) {
-    font-size: 34px;
-  }
-
-  @include rm(768) {
-    font-size: 38px;
-  }
-
-  @include rm(1024) {
-    font-size: 40px;
-  }
-
-  @include rm(1220) {
-    font-size: 48px;
     line-height: 1.3;
   }
 }
@@ -122,15 +124,16 @@ br {
 }
 
 .bg-yellow {
-  background-color: rgba(255, 176, 0, 0.24);
+  background: $yellow;
 }
 
 .bg-rose {
-  background-color: rgba(255, 87, 198, 0.24);
+  background-color: $rose
 }
 
 .bg-green {
-  background-color: rgba(16, 230, 217, 0.24);
+  background-color: $green;
+  padding: 3px;
 }
 
 .bg-purple {
@@ -229,8 +232,8 @@ br {
   @include rm(480){
     background-image: url("../img/main-bg.png");
     background-repeat: no-repeat;
-    background-position: top 75px center;
-    background-size: cover;
+    background-position: top 0px center;
+    background-size: contain;
   }
 
   //@include rm(1220){
@@ -292,3 +295,5 @@ box-shadow: 8px -8px 0 0 #ffddf4}
 .color-red {
   color: red;
 }
+
+
