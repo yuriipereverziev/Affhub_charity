@@ -190,15 +190,15 @@
   position: relative;
   padding-top: 50px; //desk
 
-  &:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 140px;
-    height: 18px;
-    background: url("../img/wave-mob.png") no-repeat;
-  }
+  //&:before {
+  //  position: absolute;
+  //  content: "";
+  //  top: 0;
+  //  left: 0;
+  //  width: 140px;
+  //  height: 18px;
+  //  background: url("../img/wave-mob.png") no-repeat;
+  //}
 
   @include rm(1220){//desk
 
@@ -206,16 +206,16 @@
     margin-top: 90px;//desk
 
     margin-bottom: 45px;//desk
-
-  &:before {
-     position: absolute;
-     content: "";
-     top: 0;
-     left: 0;
-     width: 158px;
-     height: 22px;
-     background: url("../img/wave.png") no-repeat center;
-   }
+  //
+  //&:before {
+  //   position: absolute;
+  //   content: "";
+  //   top: 0;
+  //   left: 0;
+  //   width: 158px;
+  //   height: 22px;
+  //   background: url("../img/wave.png") no-repeat center;
+  // }
   }
 }
 

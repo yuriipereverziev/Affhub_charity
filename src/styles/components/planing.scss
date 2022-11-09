@@ -1,0 +1,150 @@
+.planing__text {
+  line-height: 1.7;
+
+
+  @include rm(1024){
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.planing__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include rm(640) {
+    justify-content: space-around;
+  }
+
+  @include rm(768) {
+    justify-content: space-between;
+  }
+}
+
+.planing__item {
+  width: 48%;
+  margin-bottom: 20px;
+
+  &:nth-child(5),
+  &:nth-child(6) {
+    margin-bottom: 0;
+  }
+
+  @include rm(640) {
+    width: 33%;
+  }
+
+  @include rm(768) {
+    width: 26%;
+
+    &:nth-child(4){
+      margin-bottom: 0;
+    }
+  }
+
+  @include rm(1024){
+    width: 14%;
+  }
+
+}
+
+
+.planing__item-wrapper {
+  position: relative;
+  padding-bottom: 40px;
+  z-index: 2;
+  margin-bottom: 25px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.planing__item--star:before {
+  background: url("../img/bg-star.png") no-repeat bottom center;
+}
+
+.planing__item--cup:before {
+  background: url("../img/bg-cup.png") no-repeat bottom center;
+}
+
+.planing__item--net:before {
+  background: url("../img/bg-net.png") no-repeat bottom center;
+}
+
+.planing__item--auction:before {
+  background: url("../img/bg-auction.png") no-repeat bottom center;
+}
+
+.planing__item--disc:before {
+  background: url("../img/bg-disc.png") no-repeat bottom center;
+}
+
+.planing__item--heart:before {
+  background: url("../img/bg-heart.png") no-repeat bottom center;
+}
+
+.planing__item-img {
+  height: 67px;
+  margin: 0 auto;
+
+  @include rm(1024){
+    height: 82px;
+  }
+}
+
+
+.planing__item-text {
+  text-align: center;
+}
+
+.planing__item-text {
+  font-weight: 500;
+}
+
+.planing__wrapper {
+  max-width: 490px;
+  width: 100%;
+
+  margin-bottom: 30px;
+
+  @include rm(768) {
+    margin-bottom: 50px;
+  }
+
+  @include rm(1024){
+    max-width: 100%;
+    display: flex;
+    margin-bottom: 100px;
+  }
+
+  @include rm(1300){
+    margin-bottom: 80px;
+  }
+}
+.planing__title {
+  @include rm(1024){
+    max-width: 320px;
+    width: 100%;
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
+
+  @include rm(1300){
+    max-width: 405px;
+    margin-right: 100px;
+  }
+}
+
+.planing__title br {
+  @include rm(768) {
+    display: none;
+  }
+}
