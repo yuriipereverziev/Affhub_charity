@@ -1,33 +1,7 @@
-.team .container {
-  @include rm(1024) {
-    position: relative;
-
-    &:before {
-      position: absolute;
-      content: "";
-      top: -42px;
-      right: 58px;
-      width: 168px;
-      height: 167px;
-      background-image: url("../img/star-orange.png");
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  @include rm(1220){
-    &:before {
-      top: 0px;
-      right: 146px;
-      background-size: 100%;
-    }
-  }
-}
-
 .team__title {
-  font-size: 26px;
-  margin-bottom: 50px;
+  text-align: center;
+
+  margin-bottom: 35px;
 
   @include rm(1220) {
     width: 100%;
@@ -37,9 +11,6 @@
   }
 }
 
-.team__subtitle {
-  margin-bottom: 4px;
-}
 
 .team__list {
   @include rm(480) {
@@ -104,22 +75,6 @@
 
 
 .team__item--second {
-  position: relative;
-
-  &:before {
-    position: absolute;
-    content: "";
-    top: -32px;
-    right: -33px;
-    width: 208px;
-    height: 69px;
-    background-image: url("../img/lines-green.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 0;
-  }
-
   @include rm(1024){
     &:before {
       top: auto;
@@ -139,13 +94,6 @@
   }
 }
 
-.team__info {
-  margin-top: -50px;
-  @include rm(1220) {
-    margin-top: -60px;
-  }
-}
-
 .team__info-wrap {
   position: relative;
   padding: 10px;
@@ -159,8 +107,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  overflow: hidden;
-  border-radius: 50%;
   border: 2px solid #000;
   background-color: #fff;
   width: 280px;
