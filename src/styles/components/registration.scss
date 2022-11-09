@@ -64,14 +64,11 @@
   text-transform: uppercase;
   margin: 0;
   text-align: center;
-  //color: white;
   font-weight: bold;
-
 
   @include rm(480) {
     font-size: 40px;
   }
-
 
   @include rm(640) {
     font-size: 50px;
@@ -90,81 +87,46 @@
   }
 }
 
+.registration__sub-title{
+  text-align: center;
+  margin-bottom: 35px;
+}
+
 .registration__wrapper {
   position: relative;
   max-width: 290px;
   margin: 0 auto;
   width: 100%;
 
-  &:before {
-    position: absolute;
-    content: "";
-    bottom: -116px;
-    right: -117px;
-    width: 384px;
-    height: 384px;
-    background-image: url("../img/form-square.png");
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 0;
-  }
-
-
-
   @include rm(480){
     max-width: 350px;
   }
 
-  @include rm(640) {
-    max-width: 450px;
-    &:before {
-      bottom: -127px;
-      right: -136px;
-    }
-  }
   @include rm(768) {
-    &:before {
-      background-size: 70%;
-      bottom: -102px;
-      right: -114px;
-    }
+    max-width: 690px;
+    background: url("../img/form-bg.png") -272px center no-repeat, #ffe501;
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 0 #b3baff;
   }
-  @include rm(1024) {
-    max-width: 700px;
-    &:before {
-      background-size: 80%;
-      bottom: -112px;
-      right: -114px;
-    }
 
-    &:after {
-      position: absolute;
-      content: "";
-      top: -90px;
-      left: -324px;
-      width: 927px;
-      height: 721px;
-      background-image: url("../img/form-elipce.png");
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: 0;
-    }
+  @include rm(1024) {
+    max-width: 940px;
   }
   @include rm(1220) {
-    max-width: 790px;
-    &:before {
-      background-size: 100%;
-      bottom: -90px;
-      right: -108px;
-    }
+    max-width: 1165px;
   }
 }
 
 .registration .form {
   position: relative;
   z-index: 2;
+  //box-shadow: 8px 8px 0 #b3baff;
+
+  @include rm(768) {
+    margin: 0;
+  }
 }
 
 .registration .btn {

@@ -1,64 +1,85 @@
-.map__title {
-  position: relative;
+.map{
 
-  &:before {
-    position: absolute;
-    content: "";
-    top: 30px;
-    left: -144px;
-    width: 290px;
-    height: 32px;
-    background-image: url("../img/wave-green.png");
-    background-size: 40%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  padding-bottom: 0;
 
-  @include rm(480){
-    padding-right: 60px;
-
-    &:before {
-      top: 3px;
-      left: auto;
-      right: -155px;
-    }
-  }
-
-  @include rm(640){
-    padding-right: 60px;
-
-    &:before {
-      right: -60px;
-    }
-  }
-
-  @include rm(1024){
-    &:before {
-      background-size: 60%;
-    }
-  }
-
-  @include rm(1220){
-    margin-bottom: 40px;
-
-    &:before {
-      top: 15px;
-      right: 0px;
-      background-size: 100%;
-    }
+  @include rm(768){
+    background: url("../img/bg-grey-part.png") center bottom repeat-x;
   }
 }
 
-.map__subtitle {
-  display: block;
-  padding-left: 100px;
+.map__title {
+  font-size: 24px;
+  margin-bottom: 10px;
 
-  @include rm(480){
-    padding-left: 0;
-    display: inline-block;
+  @include rm(1300){
+    font-size: 30px;
+  }
+}
+
+.map__img{
+  display: none;
+
+  @include rm(768){
+    display: block;
   }
 }
 
 .map__wrapper {
-  border: 2px solid black;
+  max-width: 1170px;
+  margin: auto;
+  box-shadow: 0 8px 0 #FFE600;
+  background: url("../img/map-img.png") center;
+  min-height: 300px;
+
+  @include rm(768){
+    background: none;
+    box-shadow: 8px 8px 0 #FFE600;
+  }
+}
+
+.map__point{
+  margin-bottom: 30px;
+
+  &:after{
+    clear: both;
+  }
+}
+
+.map__icon{
+  float: left;
+  margin-right: 20px;
+}
+
+.map__location{
+  font-size: 16px;
+  padding: 7px 0;
+
+  @include rm(768){
+    font-size: 24px;
+  }
+  @include rm(1300){
+    font-size: 30px;
+  }
+
+}
+.map__address{
+  font-size: 13px;
+
+  @include rm(768){
+    font-size: 16px;
+  }
+  @include rm(1024){
+    font-size: 18px;
+  }
+
+}
+
+
+.map__container{
+
+
+  @include rm(768){
+    display: flex;
+    justify-content: space-between;
+  }
 }

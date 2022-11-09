@@ -6,7 +6,7 @@
   background: white;
   padding: 20px;
   padding-bottom: 30px;
-  border: solid 2px #000;
+  //border: solid 2px #000;
 
   @include rm(480){
     max-width: 350px;
@@ -26,9 +26,21 @@
 
   }
   @include rm(1220) {
-    padding: 65px 100px 70px;
-    max-width: 790px;
+    max-width: 1210px;
+    padding-left: 665px;
+    position: relative;
+
+    &:before{
+      content: '';
+      background: url("../img/form-bg.png") 0 center no-repeat, #ffe501;
+      width: 605px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
+
 
 }
 

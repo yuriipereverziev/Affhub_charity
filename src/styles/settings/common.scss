@@ -150,7 +150,7 @@ br {
 }
 
 .accent-shadow-rose {
-  box-shadow: 8px 8px 0px 0px rgba(255, 87, 198, 0.24);
+  //box-shadow: 8px 8px 0px 0px rgba(255, 87, 198, 0.24);
 }
 
 .accent-shadow-green {
@@ -227,7 +227,7 @@ br {
 
 
   @include rm(480){
-    background-image: url("../img/main-bg.png");
+    //background-image: url("../img/main-bg.png");
     background-repeat: no-repeat;
     background-position: top 75px center;
     background-size: cover;

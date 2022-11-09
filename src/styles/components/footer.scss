@@ -1,3 +1,27 @@
+.footer{
+  background: #f7f7f7;
+  position: relative;
+}
+.footer:before, .footer:after{
+  background-image: url(../img/bg-white.svg);
+  content: '';
+  top: 0;
+  width: 911px;
+  height: 300px;
+  position: absolute;
+}
+.footer:before{
+  left: -600px;
+}
+.footer:after{
+  right: -600px;
+  transform: scaleX(-1);
+}
+.footer .container{
+  position: relative;
+  z-index: 1;
+}
+
 .footer .container {
   @include rm(1024) {
     display: flex;
