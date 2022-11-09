@@ -1,12 +1,10 @@
 .team__title {
   text-align: center;
-
+  font-size: 30px;
   margin-bottom: 35px;
 
-  @include rm(1220) {
-    width: 100%;
-    max-width: 600px;
-    font-size: 43px;
+  @include rm(1300) {
+    font-size: 42px;
     margin-bottom: 60px;
   }
 }
@@ -27,23 +25,42 @@
 
 .team__item {
   position: relative;
-  max-width: 280px;
+  max-width: 220px;
   width: 100%;
   margin: 0 auto;
+
 
   &:not(:last-of-type) {
     margin-bottom: 50px;
   }
 
+  @include rm(480) {
+    max-width: 200px;
+
+    &:nth-child(3){
+      margin-bottom: 0;
+    }
+  }
+
+  @include rm(640) {
+    max-width: 240px;
+  }
+
+  @include rm(768) {
+    max-width: 260px;
+  }
+
   @include rm(1024) {
+    max-width: 220px;
+
     &:not(:last-of-type) {
       margin-bottom: 0px;
     }
   }
 
-  @include rm(1220) {
+  @include rm(1300) {
     margin: 0;
-    max-width: 307px;
+    max-width: 240px;
   }
 }
 
@@ -95,11 +112,11 @@
 }
 
 .team__info-wrap {
-  position: relative;
-  padding: 10px;
-  margin-left: 10px;
-  background: white;
-  z-index: 2;
+  margin-bottom: 20px;
+
+  @include rm(1300){
+    margin-bottom: 25px;
+  }
 }
 
 .team-wrap__img {
@@ -107,14 +124,82 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  border: 2px solid #000;
-  background-color: #fff;
-  width: 280px;
-  height: 280px;
-  margin: 0 auto;
+  //width: 280px;
+  //height: 280px;
+  margin: 0 auto 20px;
   cursor: pointer;
 
+  box-shadow: 8px 8px 0 0 #ffe600;
+  border: solid 1px #000;
+  background-color: #0019ff;
 
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 40px;
+    background: url("../img/team-img-bg.png") no-repeat center;
+    top: 10px;
+    left: 0;
+  }
+
+
+
+
+  @include rm(480) {
+    width: 200px;
+    height: 220px;
+  }
+
+  @include rm(640) {
+    width: 240px;
+    height: 260px;
+  }
+
+  @include rm(768) {
+    width: 265px;
+    height: 285px;
+  }
+
+  @include rm(1024) {
+    width: 220px;
+    height: 210px;
+  }
+  @include rm(1220) {
+    width: 240px;
+    height: 260px;
+  }
+}
+
+.team__name {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+
+  @include rm(768){
+    font-size: 18px;
+  }
+  @include rm(1300){
+    font-size: 20px;
+  }
+}
+
+.team__btn {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+  padding: 8px 15px 8px 40px;
+  font-size: 14px;
+  background-color: #0019ff;
+
+  @include rm(768){
+    font-size: 16px;
+  }
   @include rm(1024){
     transition: .8s;
     &:hover {
@@ -123,31 +208,21 @@
     }
   }
 
-  @include rm(1220) {
-    width: 307px;
-    height: 307px;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: url("../img/telegram-icon.svg") no-repeat center;
+    background-size: 100%;
   }
+
+
 }
 
-.team__name {
-  display: inline-block;
-  font-size: 23px;
-  font-weight: 700;
-
-  @include rm(1220) {
-    font-size: 26px;
-  }
+.team__position {
+  font-weight: 500;
 }
-
-.team__position--purple {
-  color: #9f72ff;
-}
-
-.team__position--yellow {
-  color: #ffb000;
-}
-
-.team__position--rose {
-  color: #ff57c6;
-}
-

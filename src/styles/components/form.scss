@@ -8,7 +8,7 @@
   padding-bottom: 30px;
   //border: solid 2px #000;
 
-  @include rm(480){
+  @include rm(480) {
     max-width: 350px;
     padding: 30px 30px 30px;
   }
@@ -27,13 +27,13 @@
   }
   @include rm(1220) {
     max-width: 1210px;
-    padding-left: 665px;
+    padding-left: 470px;
     position: relative;
 
-    &:before{
+    &:before {
       content: '';
-      background: url("../img/form-bg.png") 0 center no-repeat, #ffe501;
-      width: 605px;
+      background: url(../img/form-bg.png) -159px center no-repeat,#ffe501;
+      width: 410px;
       height: 100%;
       position: absolute;
       top: 0;
@@ -53,7 +53,7 @@
   border: none;
   background-color: #fff;
 
-  @include rm(1220){
+  @include rm(1220) {
     padding: 16px 10px;
     padding-left: 25px;
     font-size: 24px;
@@ -66,7 +66,7 @@
   margin-bottom: 25px;
   display: block;
 
-  @include rm(1220){
+  @include rm(1220) {
     margin-bottom: 43px;
   }
 }
@@ -81,7 +81,7 @@
   display: none;
   color: red;
 
-  @include rm(640){
+  @include rm(640) {
     font-size: 13px;
   }
 }
@@ -130,10 +130,10 @@
 }
 
 .form__input--pos {
-  @include rm(1024){
+  @include rm(1024) {
     margin-bottom: 40px;
   }
-  @include rm(1220){
+  @include rm(1220) {
     margin-bottom: 80px;
   }
 }
@@ -141,6 +141,7 @@
 .loader-wrapper {
   display: none;
 }
+
 .loader {
   display: flex;
   justify-content: center;
@@ -152,4 +153,3 @@
   background-color: rgba(34, 60, 80, 0.15);
   z-index: 99;
 }
-

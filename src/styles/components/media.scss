@@ -1,11 +1,16 @@
-.media{
+.media {
 
-  &__zone{
+  &__zone {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+
+    @include rm(768) {
+      flex-direction: row;
+    }
   }
-  &__item{
+
+  &__item {
     width: 100%;
     margin: 0 auto 50px;
 
@@ -23,7 +28,8 @@
       max-width: 470px;
     }
   }
-  &__zone-name{
+
+  &__zone-name {
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
@@ -46,7 +52,8 @@
       margin-bottom: 50px;
     }
   }
-  &__zone-link{
+
+  &__zone-link {
     border: 1px solid #333;
     display: flex;
     width: 100%;
@@ -60,7 +67,7 @@
   }
 }
 
-.photo{
+.photo {
   background: url("../img/soon-purple.svg") center no-repeat;
   box-shadow: 8px 8px 0 #808cff;
   -webkit-background-size: 278px;
@@ -76,7 +83,7 @@
   }
 }
 
-.video{
+.video {
   background: url("../img/soon-yellow.svg") center no-repeat;
   box-shadow: 8px 8px 0 rgba(255, 230, 0, 0.5);
 }

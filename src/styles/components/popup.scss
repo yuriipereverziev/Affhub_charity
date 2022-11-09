@@ -1,19 +1,23 @@
 .popup-registration-block {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 280px;
-  width: 100%;
-  padding: 12px;
-  border: 2px solid black;
-  min-height: 405px;
-
-  @include rm(640) {
-    padding: 20px;
-    max-width: 100%;
-    min-height: 492px;
-  }
+//  position: relative;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  max-width: 280px;
+//  width: 100%;
+//  padding: 12px;
+//  border: 2px solid black;
+//  min-height: 405px;
+//
+//  @include rm(640) {
+//    padding: 20px;
+//    max-width: 100%;
+//    min-height: 492px;
+//  }
+//
+//  @include rm(1220){
+//    max-width: 1010px;
+//  }
 }
 
 .popup__form .select__label {
@@ -42,7 +46,7 @@
 }
 
 .popup__form .form {
-  padding: 0px;
+  //padding: 0px;
   border: none;
 }
 
@@ -58,8 +62,18 @@
   text-align: left;
   display: none;
 
-  @include rm(1024) {
+  @include rm(480) {
+    width: 400px;
+  }
+  @include rm(640) {
     width: 500px;
+  }
+
+  @include rm(1024) {
+    width: 560px;
+  }
+  @include rm(1220) {
+    width: 960px;
   }
 }
 
