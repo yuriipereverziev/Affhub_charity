@@ -35,20 +35,19 @@
     text-transform: uppercase;
     margin-bottom: 25px;
 
-    @include rm(375) {
-      font-size: 33px;
-    }
+    //@include rm(375) {
+    //  font-size: 33px;
+    //}
     @include rm(768) {
-      font-size: 35px;
       margin-bottom: 30px;
     }
     @include rm(1024) {
       max-height: 400px;
-      font-size: 40px;
       margin-bottom: 40px;
     }
-    @include rm(1330) {
+    @include rm(1300) {
       font-size: 48px;
+      line-height: 56px;
       margin-bottom: 50px;
     }
   }

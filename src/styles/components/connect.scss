@@ -1,6 +1,25 @@
 .connect {
   background: url("../img/tg-bg.png") no-repeat center;
-  //background-size: 100%;
+  background-size: 585px;
+
+  @include rm(1024){
+    background-size: 620px;
+  }
+
+  @include rm(1300){
+    background-size: auto;
+  }
+
+}
+
+.connect-wrap {
+  display: block;
+  white-space: nowrap;
+
+  @include rm(768){
+    display: inline;
+    white-space: normal;
+  }
 }
 
 .connect .container {
@@ -15,9 +34,15 @@
 .connect__title {
   margin-bottom: 30px;
   text-align: center;
+  font-size: 30px;
+  line-height: 40px;
 
   @include rm(768){
     margin-bottom: 55px;
+  }
+  @include rm(1300){
+    font-size: 48px;
+    line-height: 48px;
   }
 }
 

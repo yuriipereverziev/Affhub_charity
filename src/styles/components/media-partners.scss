@@ -1,10 +1,9 @@
 .media-partnerts__title {
   margin-bottom: 30px;
   text-align: center;
-  @include rm(768){
-    font-size: 30px;
-    line-height: 40px;
-  }
+  font-size: 30px;
+  line-height: 40px;
+
   @include rm(1300) {
     font-size: 48px;
   }
@@ -17,20 +16,23 @@
   margin: 0 auto 30px;
   min-height: 75px;
   max-width: 180px;
+  width: 100%;
 
   &:nth-child(5) {
     margin-bottom: 0;
   }
 
-  @include rm(480) {
+  @include rm(375){
     max-width: 40%;
+  }
+
+  @include rm(480) {
+
     min-height: 100%;
     &:nth-child(5) {
       margin-bottom: 0;
     }
-    &:nth-child(4) {
-      margin-bottom: 0;
-    }
+
   }
 
   @include rm(768) {
@@ -38,6 +40,10 @@
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
   }
 
   @include rm(1024) {
@@ -82,7 +88,7 @@
 .media-partnerts__list {
   width: 100%;
 
-  @include rm(480) {
+  @include rm(375) {
     display: flex;
     flex-wrap: wrap;
   }

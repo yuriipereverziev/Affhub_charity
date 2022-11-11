@@ -10,7 +10,7 @@
   @include rm(1024){
     padding-top: 50px;
   }
-  @include rm(1220){
+  @include rm(1300){
     padding-top: 60px;
   }
 }
@@ -45,7 +45,7 @@
     max-width: 700px;
 
   }
-  @include rm(1220) {
+  @include rm(1300) {
     padding: 65px 100px 70px;
     max-width: 790px;
   }
@@ -60,30 +60,18 @@
 
 
 .registration__title {
-  font-size: 36px;
+  font-size: 30px;
+  line-height: 1;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 15px;
   text-align: center;
   font-weight: bold;
 
-  @include rm(480) {
-    font-size: 40px;
-  }
 
-  @include rm(640) {
-    font-size: 50px;
-  }
-
-  @include rm(768) {
-    font-size: 60px;
-  }
-
-  @include rm(1024) {
-    font-size: 70px;
-  }
-
-  @include rm(1220) {
-    font-size: 85px;
+  @include rm(1300) {
+    font-size: 48px;
+    line-height: 1;
   }
 }
 
@@ -113,9 +101,11 @@
 
   @include rm(1024) {
     max-width: 940px;
+    background-position-x: -128px;
   }
-  @include rm(1220) {
+  @include rm(1300) {
     max-width: 1165px;
+    background-position-x: 0;
   }
 }
 

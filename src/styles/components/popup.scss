@@ -15,7 +15,7 @@
 //    min-height: 492px;
 //  }
 //
-//  @include rm(1220){
+//  @include rm(1300){
 //    max-width: 1010px;
 //  }
 }
@@ -31,7 +31,7 @@
 .popup__form .select[data-state=active] .select__label+.select__input+.select__label {
   max-height: 35px;
 
-  @include rm(1220){
+  @include rm(1300){
     max-height: 45px;
   }
 }
@@ -54,7 +54,7 @@
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 280px;
+  width: 290px;
   height: auto;
   transform: translate(-50%, -50%);
   background: #fff;
@@ -63,17 +63,15 @@
   display: none;
 
   @include rm(480) {
-    width: 400px;
+    width: 350px;
   }
-  @include rm(640) {
-    width: 500px;
+
+  @include rm(768) {
+    width: 690px;
   }
 
   @include rm(1024) {
-    width: 560px;
-  }
-  @include rm(1220) {
-    width: 960px;
+    width: 940px;
   }
 }
 
@@ -172,14 +170,14 @@
     padding: 12px 10px;
   }
 
-  @include rm(1220) {
+  @include rm(1300) {
     padding: 12px 10px;
   }
 }
 
 
 .popup__form .form__input--wrap {
-  @include rm(1220) {
+  @include rm(1300) {
     border: solid 1px #10e6d9;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -189,7 +187,7 @@
 
 
 .popup__form .form__input--pos {
-  @include rm(1220) {
+  @include rm(1300) {
     margin-bottom: 30px;
   }
 }
@@ -226,4 +224,34 @@
   text-align: center;
 }
 
+
+
+.popup-registration__wrapper {
+  position: relative;
+  max-width: 290px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include rm(480){
+    max-width: 350px;
+  }
+
+  @include rm(768) {
+    max-width: 690px;
+    background: url("../img/form-bg.png") -272px center no-repeat, #ffe501;
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 0 #b3baff;
+  }
+
+  @include rm(1024) {
+    max-width: 940px;
+    background-position-x: -128px;
+  }
+  @include rm(1300) {
+    max-width: 1165px;
+    background-position-x: 0;
+  }
+}
 

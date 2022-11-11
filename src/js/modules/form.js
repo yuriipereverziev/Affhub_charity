@@ -4,13 +4,16 @@ export default function () {
   var name = document.querySelector(".name-js");
   var telegram = document.querySelector(".telegram-js");
   var email = document.querySelector(".email-js");
+
   var position = document.querySelector(".position-js");
+  var vertical = document.querySelector(".vertical-position-js");
 
   var popupForm = document.querySelector(".popup-form");
   var popupName = document.querySelector(".popup-name");
   var popupTelegram = document.querySelector(".popup-telegram");
   var popupEmail = document.querySelector(".popup-email");
   var popupPosition = document.querySelector(".popup-position-js");
+  var popupVertical = document.querySelector(".popup-vertical-position-js");
 
   function setSuccessFor(field) {
     field.parentElement.classList.remove("error-border");
@@ -25,6 +28,7 @@ export default function () {
     }
 
     var nameValue = field.value.trim();
+    console.log(nameValue)
 
     if (nameValue === "" || !isName(nameValue)) {
       field.parentElement.classList.add("error-border");
@@ -78,15 +82,17 @@ export default function () {
     setEmail(fieldName);
   }
 
-  function clearForm(name, telegram, email, position) {
+  function clearForm(name, telegram, email, position, vertical) {
     name.value = "";
     telegram.value = "";
     email.value = "";
     position.value = "";
+    vertical.value = "";
     name.parentElement.classList.remove("success");
     telegram.parentElement.classList.remove("success");
     email.parentElement.classList.remove("success");
     position.parentElement.classList.remove("success");
+    vertical.parentElement.classList.remove("success");
   }
 
   var date = new Date();
@@ -97,7 +103,7 @@ export default function () {
   var timeM = date.getMinutes();
 
   firstForm.addEventListener('keyup', function (event) {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     if (event.target.name === "name") {
       getName(name);
     } else if (event.target.name === "telegram") {
@@ -106,6 +112,8 @@ export default function () {
       getEmail(email)
     } else if (event.target.name === "position") {
       getName(position);
+    } else if (event.target.name === "vertical") {
+      getName(vertical);
     }
   })
 
@@ -116,8 +124,12 @@ export default function () {
       getTelegram(popupTelegram)
     } else if (event.target.name === "email") {
       getEmail(popupEmail)
+
     } else if (event.target.name === "position") {
       getName(popupPosition);
+    }
+    else if (event.target.name === "vertical") {
+      getName(popupVertical);
     }
   })
 
@@ -126,6 +138,7 @@ export default function () {
     $(firstForm).find($(".js-input-date")).val("".concat(day, ".").concat(month, ".").concat(year, " / ").concat(timeH, ":").concat(timeM));
     getName(name);
     getName(position);
+    getName(vertical);
     getTelegram(telegram);
     getEmail(email);
     var hasErrors = document.querySelector(".form-js .error-border:not(.hidden)");
@@ -134,17 +147,17 @@ export default function () {
 
       $(".loader-wrapper").show();
       $.ajax({
-        url: "https://api.apispreadsheets.com/data/Qzdwbuqi9jH5vATv/",
+        url: "https://api.apispreadsheets.com/data/NyGP9aLfAHlMQdMG/",
         type: "post",
         data: new FormData(this),
         contentType: false,
         processData: false,
         headers: {
-          accessKey: "8fe5bcc5bf8f67999fec3499691bc527",
-          secretKey: "f5986da955050e13bafc0cb69961beae"
+          accessKey: "d96ea833127d5c2715f1aa3df2125224",
+          secretKey: "29bb34df13bce164b20ea0db8e979d7a"
         },
         success: function success() {
-          clearForm(name, telegram, email, position);
+          clearForm(name, telegram, email, position, vertical);
           $(".registration-block").hide();
           $(".registration__success").show();
         },
@@ -160,23 +173,24 @@ export default function () {
     getName(popupPosition);
     getTelegram(popupTelegram);
     getEmail(popupEmail);
+    getName(popupVertical);
     $(popupForm).find($(".js-input-date-popup")).val("".concat(day, ".").concat(month, ".").concat(year, " / ").concat(timeH, ":").concat(timeM));
     var hasErrors = document.querySelector(".popup-form .error-border:not(.hidden)");
 
     if (!hasErrors) {
       $(".popup-loader-wrapper").show();
       $.ajax({
-        url: "https://api.apispreadsheets.com/data/Qzdwbuqi9jH5vATv/",
+        url: "https://api.apispreadsheets.com/data/NyGP9aLfAHlMQdMG/",
         type: "post",
         data: new FormData(this),
         contentType: false,
         processData: false,
         headers: {
-          accessKey: "8fe5bcc5bf8f67999fec3499691bc527",
-          secretKey: "f5986da955050e13bafc0cb69961beae"
+          accessKey: "d96ea833127d5c2715f1aa3df2125224",
+          secretKey: "29bb34df13bce164b20ea0db8e979d7a"
         },
         success: function success() {
-          clearForm(popupName, popupTelegram, popupEmail, popupPosition);
+          clearForm(popupName, popupTelegram, popupEmail, popupPosition, popupVertical);
           $(".popup-form").hide();
           $(".popup-loader-wrapper").hide();
           $(".popup-registration__success").show();

@@ -37,7 +37,7 @@ const Timer = (function () {
         Timer.timeToHtml(minutesTo, minutes);
         Timer.timeToHtml(secondsTo, seconds);
 
-        console.log(days)
+        // console.log(days)
 
       }
       setInterval(timer, 1000);

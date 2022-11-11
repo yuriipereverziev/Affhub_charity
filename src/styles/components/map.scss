@@ -1,23 +1,48 @@
 .map{
-
   padding-bottom: 0;
 
   @include rm(768){
-    background: url("../img/bg-grey-part.png") center bottom repeat-x;
+    background: url(../img/bg-grey-part.png) center bottom 29px repeat-x;
+    background-size: 150px;
+  }
+
+  @include rm(1024){
+    background-size: 200px;
+  }
+
+  @include rm(1300){
+    background: url(../img/bg-grey-part.png) center bottom 53px repeat-x;
+    background-size: 244px;
   }
 }
 
 .map__title {
+  text-transform: uppercase;
   font-size: 24px;
   margin-bottom: 10px;
+  font-weight: bold;
+
+  @include rm(768){
+    margin-bottom: 0;
+    max-width: 250px;
+    width: 100%;
+  }
+
+  @include rm(1024){
+    margin-right: 160px;
+  }
 
   @include rm(1300){
     font-size: 30px;
+    line-height: 45px;
+    margin-right: 200px;
   }
 }
 
 .map__img{
   display: none;
+  //margin-left: calc(50% - 600px);
+  //margin-top: -130px;
 
   @include rm(768){
     display: block;
@@ -26,28 +51,59 @@
 
 .map__wrapper {
   max-width: 1170px;
-  margin: auto;
+  //margin: auto;
   box-shadow: 0 8px 0 #FFE600;
   background: url("../img/map-img.png") center;
-  min-height: 300px;
+  min-height: 295px;
+  border: 1px solid #0019ff;
+
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+
+  @include rm(480){
+    box-shadow: 8px 8px 0 #FFE600;
+    min-height: 398px;
+    width: 100%;
+    margin: 0;
+    transform: none;
+  }
+
+  @include rm(640){
+    min-height: 498px;
+  }
+
 
   @include rm(768){
     background: none;
     box-shadow: 8px 8px 0 #FFE600;
+    border: none;
+    min-height: 300px;
   }
 }
 
 .map__point{
+  display: flex;
   margin-bottom: 30px;
 
   &:after{
     clear: both;
   }
+
+  @include rm(768){
+    margin-bottom: 0;
+  }
 }
 
 .map__icon{
+  width: 30px;
   float: left;
   margin-right: 20px;
+
+  @include rm(768){
+    width: 40px;
+  }
 }
 
 .map__location{
@@ -56,6 +112,7 @@
 
   @include rm(768){
     font-size: 24px;
+    padding: 0;
   }
   @include rm(1300){
     font-size: 30px;
@@ -81,5 +138,10 @@
   @include rm(768){
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  @include rm(1024){
+    justify-content: flex-start;
   }
 }

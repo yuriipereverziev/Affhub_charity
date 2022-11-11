@@ -1,8 +1,8 @@
 .form {
   max-width: 290px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  //margin-left: auto;
+  //margin-right: auto;
   background: white;
   padding: 20px;
   padding-bottom: 30px;
@@ -10,65 +10,83 @@
 
   @include rm(480) {
     max-width: 350px;
-    padding: 30px 30px 30px;
+    padding: 25px;
   }
 
   @include rm(640) {
-    padding: 35px 45px 35px;
+    //padding: 35px 45px 35px;
     max-width: 450px;
     width: 100%;
-    margin: 0 auto;
+    //margin: 0 auto;
   }
 
+  @include rm(768) {
+    padding: 35px 75px 45px;
+  }
   @include rm(1024) {
-    padding: 45px 60px 45px;
-    max-width: 700px;
-
+    padding: 35px 80px 45px;
+    max-width: 460px;
   }
-  @include rm(1220) {
-    max-width: 1210px;
-    padding-left: 470px;
-    position: relative;
 
-    &:before {
-      content: '';
-      background: url(../img/form-bg.png) -159px center no-repeat,#ffe501;
-      width: 410px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+  @include rm(1300) {
+    padding: 35px 95px 35px 100px;
+    max-width: 565px;
+
+
+    //position: relative;
+    //&:before {
+    //  content: '';
+    //  background: url(../img/form-bg.png) -159px center no-repeat,#ffe501;
+    //  width: 410px;
+    //  height: 100%;
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //}
   }
 
 
 }
 
+.form__input[type="text"], .form__input[type="email"]  {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Montserrat", Helvetica, sans-serif;
+
+  @include rm(375){
+    font-size: 18px;
+  }
+}
 .form__input {
-  padding: 12px 10px 12px 10px;
+  padding: 12px 10px 12px 16px;
   width: 100%;
   transition: .3s;
   color: #444;
   font-size: 16px;
+  font-weight: 500;
   border: none;
-  background-color: #fff;
+  background-color: #f5f5f5;
 
-  @include rm(1220) {
-    padding: 16px 10px;
-    padding-left: 25px;
-    font-size: 24px;
+  @include rm(375){
+    padding: 13px 10px 13px 16px;
   }
+
+  //@include rm(1300) {
+  //  padding: 16px 10px;
+  //  padding-left: 25px;
+  //  font-size: 24px;
+  //}
 }
 
 .form__input--wrap {
   border: solid 1px #10e6d9;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin-top: 5px;
+  margin-bottom: 16px;
   display: block;
+}
 
-  @include rm(1220) {
-    margin-bottom: 43px;
-  }
+.form label {
+  font-size: 14px;
 }
 
 
@@ -82,7 +100,7 @@
   color: red;
 
   @include rm(640) {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -133,7 +151,7 @@
   @include rm(1024) {
     margin-bottom: 40px;
   }
-  @include rm(1220) {
+  @include rm(1300) {
     margin-bottom: 80px;
   }
 }
@@ -149,7 +167,17 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
   background: url("../img/spinner.svg") no-repeat center;
   background-color: rgba(34, 60, 80, 0.15);
   z-index: 99;
+}
+
+.form__btn {
+  padding: 12px 15px 12px 10px;
+  margin-top: 30px;
+  @include rm(375){
+    margin-top: 40px;
+  }
 }

@@ -40,28 +40,41 @@ text-align: center;
   }
 }
 
-
 .partners__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
   border: solid 2px #000;
   background: white;
   margin: 0 auto;
-  max-width: 290px;
+
+
+  max-width: 340px;
+
   width: 100%;
   padding: 25px 20px 35px;
+
+  @include rm(640){
+    max-width: 290px;
+    min-height: 424px;
+  }
 
 
   @include rm(768){
     max-width: 330px;
+
   }
 
   @include rm(1024){
     max-width: 400px;
     padding: 30px 30px 50px;
+    min-height: 467px;
   }
 
   @include rm(1300){
     max-width: 435px;
     padding: 20px 30px 40px 30px;
+    min-height: 427px;
   }
 }
 

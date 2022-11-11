@@ -56,7 +56,7 @@ button {
   @include rm(1300) {
     padding-left: 10px;
     padding-right: 10px;
-    width: 1220px;
+    width: 1170px;
   }
 }
 
@@ -166,6 +166,10 @@ br {
   background-color: rgba(159, 114, 255, 0.24);
 }
 
+.bg-orange-dark {
+  background-color: #f9b9b5;
+}
+
 .bg-blue {
   background-color: rgba(64, 151, 211, 0.24);
 }
@@ -184,28 +188,46 @@ br {
 }
 
 
-.accent-shadow-rose {
-  box-shadow: 8px 8px 0px 0px rgba(255, 87, 198, 0.24);
+
+.accent-shadow-blue {
+  box-shadow: 8px 8px 0 0 rgba(159, 114, 255, 0.3);
 }
 
 
 
-//.accent-shadow-green {
-//  box-shadow: 8px 8px 0px 0px rgba(16, 230, 217, 0.24);
-//}
-//
-//.accent-shadow-blue {
-//  box-shadow: 8px 8px 0px 0px rgba(64, 151, 211, 0.24);
-//}
-//
-//.accent-shadow-orange {
-//  box-shadow: 8px 8px 0px 0px rgba(255, 89, 89, 0.24);
-//}
-//
-//.accent-shadow-black {
-//  box-shadow: 8px 8px 0px 0px #D7D7D7;
-//
-//}
+
+.accent-shadow-rose {
+  box-shadow: 8px 8px 0px 0px rgba(255, 87, 198, 0.24);
+}
+
+.custom-bg>* {
+  position: relative;
+  z-index: 1;
+}
+.custom-bg {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background: url(../img/img2.png) 0 0 no-repeat;
+    width: 578px;
+    height: 701px;
+    top: 0;
+  }
+
+  @include r(1920){
+    &:before {
+      left: calc(50% - 800px);
+    }
+
+    &:after {
+      right: calc(50% - 800px);
+      transform: scaleX(-1);
+    }
+  }
+}
 
 .btn {
   font-family: "Acworth", sans-serif;
