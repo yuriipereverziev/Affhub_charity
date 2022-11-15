@@ -1,6 +1,16 @@
 .promo {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @include rm(768){
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @include rm(1024){
+    //padding-top: 75px;
+    padding-top: 90px;
+  }
 }
 
 .promo .container {
@@ -9,7 +19,7 @@
     justify-content: space-between;
   }
 
-  @include rm(768){
+  @include rm(768) {
     flex-wrap: wrap;
     justify-content: space-around;
   }
@@ -20,14 +30,14 @@
     max-width: 296px;
     width: 100%;
   }
-  @include rm(768){
+  @include rm(768) {
     max-width: 210px;
   }
 
-  @include rm(1024){
+  @include rm(1024) {
     max-width: 350px;
   }
-  @include rm(1300){
+  @include rm(1300) {
     max-width: 375px;
   }
 }
@@ -38,15 +48,15 @@
     width: 100%;
   }
 
-  @include rm(768){
+  @include rm(768) {
     max-width: 420px;
     margin-right: 85px;
   }
-  @include rm(1024){
+  @include rm(1024) {
     max-width: 460px;
     margin-right: 160px;
   }
-  @include rm(1300){
+  @include rm(1300) {
     max-width: 660px;
     margin-right: 115px;
   }
@@ -116,7 +126,7 @@
   padding-right: 1px;
   background: linear-gradient(270deg, #FFE600 0%, rgba(255, 230, 0, 0) 100%);
   margin-bottom: 5px;
-  @include rm(1024){
+  @include rm(1024) {
     margin-bottom: 8px;
   }
 }
@@ -127,7 +137,7 @@
   padding-right: 1px;
   margin-bottom: 5px;
 
-  @include rm(1024){
+  @include rm(1024) {
     margin-bottom: 8px;
   }
 }
@@ -158,11 +168,11 @@
   line-height: 30px;
   margin-bottom: 20px;
 
-  @include rm(768){
+  @include rm(768) {
     font-size: 16px;
     margin-bottom: 0;
   }
-  @include rm(1024){
+  @include rm(1024) {
     font-size: 24px;
     line-height: 36px;
   }
@@ -184,16 +194,16 @@
   margin: 0 auto;
   margin-bottom: 20px;
 
-  @include rm(768){
+  @include rm(768) {
     margin-bottom: 30px;
   }
 
-  @include rm(1024){
+  @include rm(1024) {
     max-width: 350px;
     padding: 18px 30px;
     margin-bottom: 25px;
   }
-  @include rm(1300){
+  @include rm(1300) {
     max-width: 375px;
   }
 }
@@ -203,17 +213,17 @@
   height: 40px;
   margin-right: 45px;
 
-  @include rm(768){
+  @include rm(768) {
     margin-right: 15px;
   }
 
-  @include rm(1024){
+  @include rm(1024) {
     width: 68px;
     height: 68px;
     margin-right: 30px;
   }
 
-  @include rm(1300){
+  @include rm(1300) {
     margin-right: 40px;
   }
 
@@ -225,11 +235,11 @@
   font-weight: 500;
   margin-right: 15px;
 
-  @include rm(768){
+  @include rm(768) {
     margin-right: 8px;
   }
 
-  @include rm(1024){
+  @include rm(1024) {
     margin-right: 15px;
     font-size: 85px;
     line-height: 1;
@@ -240,7 +250,7 @@
   display: flex;
   flex-direction: column;
 
-  @include rm(1024){
+  @include rm(1024) {
     font-size: 24px;
   }
 }
@@ -297,17 +307,17 @@
   text-align: center;
   font-size: 12px;
 
-  @include rm(1024){
+  @include rm(1024) {
     text-align: left;
     font-size: 14px;
   }
 }
 
 .promo-btn__mob {
-  @include rm(768){
+  @include rm(768) {
     display: none;
   }
-  @include rm(1024){
+  @include rm(1024) {
     display: block;
   }
 }
@@ -315,11 +325,11 @@
 
 .promo-btn__desk {
   display: none;
-  @include rm(768){
+  @include rm(768) {
     display: block;
   }
 
-  @include rm(1024){
+  @include rm(1024) {
     display: none;
   }
 }

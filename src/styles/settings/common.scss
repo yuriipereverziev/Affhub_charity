@@ -5,7 +5,7 @@ body {
   line-height: 1.67;
   overflow-x: hidden;
 
-  @include rm(1024){
+  @include rm(1024) {
     font-size: 18px;
   }
 }
@@ -99,16 +99,26 @@ button {
   background: url("../img/separator.png") no-repeat center;
   background-size: 1600px;
 
-  @include rm(768){
+  @include rm(768) {
     padding-top: 47px;
     padding-bottom: 47px;
   }
 
-  @include rm(1300){
+  @include rm(1300) {
     padding-top: 79px;
     padding-bottom: 79px;
     background-size: auto;
   }
+}
+
+
+.color-black {
+  color: black;
+}
+
+
+.color-red {
+  color: red;
 }
 
 .text-bold {
@@ -118,6 +128,7 @@ button {
 .text-black {
   font-weight: 900;
 }
+
 .text-italic {
   font-style: italic;
 }
@@ -132,15 +143,15 @@ br {
   font-size: 0;
 }
 
-.text-bg__white {
-  background: white;
-}
+//.text-bg__white {
+//  background: white;
+//}
 
 
-.accent-rose {
-  display: block;
-  color: $rose;
-}
+//.accent-rose {
+//  display: block;
+//  color: $rose;
+//}
 
 .bg-yellow {
   background: $yellow;
@@ -161,72 +172,37 @@ br {
 }
 
 
-
-.bg-purple {
-  background-color: rgba(159, 114, 255, 0.24);
-}
+//.bg-purple {
+//  background-color: rgba(159, 114, 255, 0.24);
+//}
 
 .bg-orange-dark {
   background-color: #f9b9b5;
 }
 
-.bg-blue {
-  background-color: rgba(64, 151, 211, 0.24);
-}
+//.bg-blue {
+//  background-color: rgba(64, 151, 211, 0.24);
+//}
 
-.bg-orange {
-  background-color: rgba(255, 89, 89, 0.24);
-}
+//.bg-orange {
+//  background-color: rgba(255, 89, 89, 0.24);
+//}
 
 .accent-shadow-yellow {
   box-shadow: 8px 8px 0 0 rgba(255, 168, 0, 0.3);
 }
 
-
-.accent-shadow-purple {
-  box-shadow: 8px 8px 0 0 rgba(255, 87, 198, 0.3);
-}
-
-
+//.accent-shadow-purple {
+//  box-shadow: 8px 8px 0 0 rgba(255, 87, 198, 0.3);
+//}
 
 .accent-shadow-blue {
   box-shadow: 8px 8px 0 0 rgba(159, 114, 255, 0.3);
 }
 
 
-
-
 .accent-shadow-rose {
   box-shadow: 8px 8px 0px 0px rgba(255, 87, 198, 0.24);
-}
-
-.custom-bg>* {
-  position: relative;
-  z-index: 1;
-}
-.custom-bg {
-  position: relative;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    background: url(../img/img2.png) 0 0 no-repeat;
-    width: 578px;
-    height: 701px;
-    top: 0;
-  }
-
-  @include r(1920){
-    &:before {
-      left: calc(50% - 800px);
-    }
-
-    &:after {
-      right: calc(50% - 800px);
-      transform: scaleX(-1);
-    }
-  }
 }
 
 .btn {
@@ -266,81 +242,292 @@ br {
     }
   }
   @include rm(1300) {
-    padding: 13px 15px 13px 10px;
+    padding: 10px;
   }
 }
 
-.main-bg {
-  //position: relative;
+//.mark-yellow {
+//  display: inline-block;
+//  //font-family: "Montserrat", Helvetica, sans-serif;
+//  background-color: rgba(255, 176, 0, 0.24);
+//}
 
-  background-color: #FBFBFB;
+//.mark-green {
+//  display: inline-block;
+//  //font-family: "Montserrat", Helvetica, sans-serif;
+//  background-color: rgba(16, 230, 217, 0.24);
+//}
 
-
-  //@include rm(480){
-  //  background-image: url("../img/main-bg.png");
-  //  background-repeat: no-repeat;
-  //  background-position: top 0px center;
-  //  background-size: contain;
-  //}
-
-  //@include rm(1220){
-  //  background-image: url("../img/main-bg.svg");
-  //
-  //}
-  //z-index: -2;
-}
-
-.mark-yellow {
-  display: inline-block;
-  //font-family: "Montserrat", Helvetica, sans-serif;
-  background-color: rgba(255, 176, 0, 0.24);
-}
-
-.mark-green {
-  display: inline-block;
-  //font-family: "Montserrat", Helvetica, sans-serif;
-  background-color: rgba(16, 230, 217, 0.24);
-}
-
-.mark-purple {
-  padding-left: 10px;
-  padding-right: 10px;
-  font-style: italic;
-  display: inline-block;
-  font-family: "Montserrat", Helvetica, sans-serif;
-  background-color:  #decffe;
-}
-
-.mark-rose {
-  padding-left: 5px;
-  padding-right: 10px;
-  font-weight: bold;
-  line-height: 1;
-  font-style: italic;
-  display: inline-block;
-  font-family: "Montserrat", Helvetica, sans-serif;
-  background-color: rgba(255, 87, 198, 0.24);
-}
-
-
-//.circle-shadow-yellow {
-//  box-shadow: 8px -8px 0 0 #ffecc2;
+//.mark-purple {
+//  padding-left: 10px;
+//  padding-right: 10px;
+//  font-style: italic;
+//  display: inline-block;
+//  font-family: "Montserrat", Helvetica, sans-serif;
+//  background-color: #decffe;
 //}
 //
-//.circle-shadow-rose {
-//box-shadow: 8px -8px 0 0 #ffddf4}
-//
-//.circle-shadow-green {
-//  box-shadow: 8px -8px 0 0 #c6f9f6;
-//}
-//
-//.circle-shadow-purple {
-//  box-shadow: 8px -8px 0 0 #decffe;
+//.mark-rose {
+//  padding-left: 5px;
+//  padding-right: 10px;
+//  font-weight: bold;
+//  line-height: 1;
+//  font-style: italic;
+//  display: inline-block;
+//  font-family: "Montserrat", Helvetica, sans-serif;
+//  background-color: rgba(255, 87, 198, 0.24);
 //}
 
 
-.color-red {
-  color: red;
+
+.custom-bg > * {
+  position: relative;
+  z-index: 1
 }
+
+.bg {
+  background: url(../img/bg.png) 50% 0%;
+  background-repeat: no-repeat
+}
+
+.btn, .custom-bg {
+  position: relative
+}
+
+.custom-bg {
+  z-index: 1
+}
+
+
+.custom-bg:after,
+.custom-bg:before {
+  @include rm(768){
+    content: "";
+    position: absolute;
+    top: -150px;
+    width: 1000px;
+    height: 1000px;
+  }
+
+  @include rm(1024){
+    width: 1000px;
+  }
+  @include rm(1300){
+    width: 1100px;
+  }
+}
+
+.top-gradient-item {
+  position: absolute;
+  z-index: 0;
+  background: radial-gradient(circle, #10e6d92b 25%, rgba(16, 230, 217, 0) 70%);
+  opacity: 0.6;
+  width: 350px;
+  height: 500px;
+  top: -100px;
+
+  @include rm(480){
+    width: 480px;
+    height: 1000px;
+    left: calc(50% - 280px);
+    top: -600px;
+  }
+  @include rm(768){
+    width: 480px;
+    height: 1000px;
+    left: calc(50% - 280px);
+    top: -600px;
+  }
+
+  @include rm(1024){
+    width: 480px;
+    height: 1000px;
+    left: calc(50% - 280px);
+    top: -600px;
+  }
+  @include rm(1300){
+    width: 980px;
+    height: 1000px;
+    top: -500px;
+    left: calc(50% - 490px);
+  }
+}
+
+
+.custom-bg.promo-bg {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: -150px;
+    width: 1000px;
+    height: 1000px;
+
+  }
+
+  &:before{
+    background: radial-gradient(circle, #dbdfff 25%, rgba(224, 227, 255, 0) 70%);
+    left: calc(50% + (-910px));
+
+    @include rm(375){
+      left: calc(50% + (-970px));
+    }
+    @include rm(480){
+      left: calc(50% + (-1050px));
+    }
+    @include rm(768){
+      left: calc(50% + (-1250px));
+    }
+    @include rm(1300){
+      left: calc(50% + (-1400px));
+    }
+  }
+  &:after {
+    background: radial-gradient(circle, #fff5e0 25%, rgba(224, 227, 255, 0) 70%);
+
+    right: calc(50% + (-910px));
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+    @include rm(375){
+      right: calc(50% + (-970px));
+    }
+
+    @include rm(480){
+      right: calc(50% + (-1050px));
+    }
+    @include rm(768){
+      right: calc(50% + (-1250px));
+    }
+
+    @include rm(1300){
+      right: calc(50% + (-1400px));
+    }
+  }
+}
+
+.custom-bg:before {
+  @include rm(768){
+    background: radial-gradient(circle, #dbdfff 25%, rgba(224, 227, 255, 0) 70%);
+    left: calc(50% + (-1250px));
+  }
+  @include rm(1024){
+    left: calc(50% + (-1250px));
+  }
+  @include rm(1300){
+    left: calc(50% + (-1400px));
+  }
+}
+
+.custom-bg:after {
+  @include rm(768){
+    background: radial-gradient(circle, #fff5e0 25%, rgba(224, 227, 255, 0) 70%);
+    right: calc(50% + (-1250px));
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1)
+  }
+  @include rm(1024){
+    right: calc(50% + (-1250px));
+  }
+  @include rm(1300){
+    right: calc(50% + (-1400px));
+  }
+}
+
+
+.custom-bg.pink:after {
+  background: radial-gradient(circle, #ff57c621 25%, rgba(255, 87, 198, 0) 70%);
+}
+
+
+.custom-bg.turquoise:before {
+  background: radial-gradient(circle, #10e6d92b 25%, rgba(16, 230, 217, 0) 70%);
+}
+
+
+.team-bg {
+  @include rm(768){
+    .bg {
+      background-position: center top 105px;
+    }
+
+    &:before,
+    &:after {
+      top: 105px;
+    }
+  }
+  @include rm(1024){
+    .bg {
+      background-position: center top 87px;
+    }
+    &:before,
+    &:after {
+      top: -150px;
+    }
+  }
+  @include rm(1300) {
+    .bg {
+      background-position: center top 85px;
+    }
+  }
+}
+
+.sponsor-bg {
+  @include rm(1300) {
+    .bg {
+      background-position: center top 80px;
+    }
+    &:before,
+    &:after {
+      top: 80px;
+    }
+  }
+}
+
+.custom-bg.yellow {
+  @include rm(768) {
+    &:after {
+      background: radial-gradient(circle, #ffe60033 25%, rgba(255, 230, 0, 0) 70%);
+    }
+  }
+}
+
+.lots-bg {
+  @include rm(768){
+    &:before,
+    &:after {
+      top: -200px;
+    }
+  }
+  @include rm(1300) {
+    &:before,
+    &:after {
+      top: 0px;
+    }
+  }
+}
+
+.sponsor-bg {
+  @include rm(1300) {
+    .bg {
+      background-position: center top 80px;
+    }
+    &:before,
+    &:after {
+      top: 80px;
+    }
+  }
+}
+
+.custom-bg.partner .bg {
+  background-position: center 60%;
+}
+
+.custom-bg.partner:after,
+.custom-bg.partner:before {
+  top: 205px;
+}
+
+
 
 

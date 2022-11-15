@@ -13,7 +13,7 @@
                     .popup-loader-wrapper
                         .popup-loader
 
-                    form.form.popup-form(action='/' method='post')
+                    form.form.popup-form(action='/' method='post' autocomplete="off")
                         label(for="name") Ім’я:
                         .form__input--wrap
                             input.form__input.form__input--name.popup-name(id="name" placeholder="Ваше ім'я" type='text' name='name')
@@ -37,6 +37,9 @@
                             .select__content
                                 input#singleSelect5.select__input(type='radio' name='position' checked='' value="owner / ceo")
                                 label.select__label.popup-select__label(for='singleSelect5') owner / ceo
+
+                                input#singleSelect10.select__input(type='radio' name='position' checked='' value="owner / ceo")
+                                label.select__label.popup-select__label(for='singleSelect10') owner / ceo
 
                                 input#singleSelect6.select__input(type='radio' name='position' value="webmaster / mediabayer")
                                 label.select__label.popup-select__label(for='singleSelect6') webmaster / mediabayer
@@ -63,6 +66,9 @@
                             .select__content
                                 input#verticalSelect4.select__input(type='radio' name='vertical' checked='' value="Nutra")
                                 label.select__label.popup-vertical__label-js(for='verticalSelect4') Nutra
+
+                                input#verticalSelect8.select__input(type='radio' name='vertical' checked='' value="Nutra")
+                                label.select__label.popup-vertical__label-js(for='verticalSelect8') Nutra
 
                                 input#verticalSelect5.select__input(type='radio' name='vertical' value="Gambling")
                                 label.select__label.popup-vertical__label-js(for='verticalSelect5') Gambling

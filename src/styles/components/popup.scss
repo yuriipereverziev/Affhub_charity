@@ -154,26 +154,26 @@
     bottom: -20px;
   }
 }
-
-.popup__form .form__input {
-
-
-  font-size: 14px;
-
-  padding: 10px;
-
-  @include rm(480) {
-    font-size: 16px;
-  }
-
-  @include rm(640) {
-    padding: 12px 10px;
-  }
-
-  @include rm(1300) {
-    padding: 12px 10px;
-  }
-}
+//
+//.popup__form .form__input {
+//
+//
+//  font-size: 14px;
+//
+//  padding: 10px;
+//
+//  @include rm(480) {
+//    font-size: 16px;
+//  }
+//
+//  @include rm(640) {
+//    padding: 12px 10px;
+//  }
+//
+//  @include rm(1300) {
+//    padding: 12px 10px;
+//  }
+//}
 
 
 .popup__form .form__input--wrap {
