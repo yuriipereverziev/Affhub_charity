@@ -85,3 +85,13 @@ text-align: center;
 .partners__text {
   margin-bottom: 30px;
 }
+.partners__text a{
+  color: #000000;
+}
+.partners__text a:hover{
+  text-decoration: underline;
+}
+.partners__logo-link{
+  display: block;
+  margin: auto;
+}
