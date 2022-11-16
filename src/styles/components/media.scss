@@ -67,10 +67,10 @@
 }
 
 .photo {
-  background: url("../img/soon-purple.svg") center no-repeat;
+  background: url("../img/soon-purple.png") center no-repeat;
   box-shadow: 8px 8px 0 #808cff;
-  -webkit-background-size: 278px;
-  background-size: 278px;
+  -webkit-background-size: 265px;
+  background-size: 265px;
 
   @include rm(768) {
     -webkit-background-size: 310px;
@@ -83,6 +83,19 @@
 }
 
 .video {
-  background: url("../img/soon-yellow.svg") center no-repeat;
+  background: url("../img/soon-yellow.png") center no-repeat;
   box-shadow: 8px 8px 0 rgba(255, 230, 0, 0.5);
+
+  -webkit-background-size: 278px;
+  background-size: 278px;
+
+
+  @include rm(768) {
+    -webkit-background-size: 310px;
+    background-size: 310px;
+  }
+  @include rm(1024) {
+    -webkit-background-size: 376px;
+    background-size: 376px;
+  }
 }

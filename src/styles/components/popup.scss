@@ -48,6 +48,8 @@
 .popup__form .form {
   //padding: 0px;
   border: none;
+  padding: 15px;
+  padding-bottom: 20px;
 }
 
 .popup-wrapper {
@@ -100,9 +102,13 @@
 
   @include rm(640) {
     top: -50px;
-    right: -50px;
+    right: 0px;
     width: 40px;
     height: 40px;
+  }
+
+  @include rm(1024) {
+    right: -50px;
   }
 }
 
@@ -177,6 +183,10 @@
 
 
 .popup__form .form__input--wrap {
+  margin-bottom: 10px;
+  @include rm(480) {
+    margin-bottom: 15px;
+  }
   @include rm(1300) {
     border: solid 1px #10e6d9;
     margin-top: 10px;

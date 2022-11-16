@@ -1,17 +1,8 @@
-<svg width="376" height="188" viewBox="0 0 376 188" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.2">
-<rect x="150.4" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="150.4" y="150.4" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="150.4" y="37.6001" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="150.4" y="75.2002" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="150.4" y="112.8" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="75.2" y="37.6001" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="75.2" y="75.2002" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="75.2" y="112.8" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect y="75.2002" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="225.6" y="37.6001" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="225.6" y="75.2002" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="225.6" y="112.8" width="75.2" height="37.6" fill="#0F26FD"/>
-<rect x="300.8" y="75.2002" width="75.2" height="37.6" fill="#0F26FD"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="376" height="188" fill="none">
+  <g fill="#0F26FD" opacity=".2">
+    <path d="M150.4 0h75.2v37.6h-75.2zm0 150.4h75.2V188h-75.2zm0-112.8h75.2v37.6h-75.2zm0 37.6h75.2v37.6h-75.2z"/>
+    <path d="M150.4 112.8h75.2v37.6h-75.2zM75.2 37.6h75.2v37.6H75.2zm0 37.6h75.2v37.6H75.2z"/>
+    <path d="M75.2 112.8h75.2v37.6H75.2zM0 75.2h75.2v37.6H0zm225.6-37.6h75.2v37.6h-75.2zm0 37.6h75.2v37.6h-75.2z"/>
+    <path d="M225.6 112.8h75.2v37.6h-75.2zm75.2-37.6H376v37.6h-75.2z"/>
+  </g>
 </svg>
