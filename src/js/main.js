@@ -23,3 +23,18 @@ if (document.documentElement.clientWidth < 480) {
 } else {
   main();
 }
+
+$('.form-js').on('submit', function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: '../php/send.php',
+    type: 'POST',
+    contentType: false,
+    processData: false,
+    data: new FormData(this),
+    success: function(msg) {
+      console.log(msg);
+      $('#form').trigger('reset');
+    }
+  });
+});

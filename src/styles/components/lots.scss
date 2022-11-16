@@ -22,7 +22,7 @@
 
   @include rm(768){
     width: 100%;
-    max-width: 270px;
+    max-width: 290px;
     text-align: left;
     margin-bottom: 0;
     margin-right: 90px;
@@ -35,7 +35,7 @@
   @include rm(1300){
     font-size: 48px;
     line-height: 48px;
-    max-width: 425px;
+    max-width: 455px;
   }
 }
 

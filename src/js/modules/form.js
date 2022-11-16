@@ -28,7 +28,7 @@ export default function () {
     }
 
     var nameValue = field.value.trim();
-    console.log(nameValue)
+    // console.log(nameValue)
 
     if (nameValue === "" || !isName(nameValue)) {
       field.parentElement.classList.add("error-border");
